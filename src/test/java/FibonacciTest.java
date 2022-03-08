@@ -5,6 +5,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+/*
+ * Expected results:
+ * 0 → 0
+ * 1 → 1
+ * 2 → 1
+ * 3 → 2
+ * 4 → 3
+ * 5 → 5
+ * -1 → exception
+ * */
+
 public class FibonacciTest {
     private Fibonacci fibonacci;
 
@@ -61,7 +72,7 @@ public class FibonacciTest {
     }
 
     @Test
-    public void shouldNeg1Throw(){
+    public void shouldNeg1ThrowException(){
         assertThrows(RuntimeException.class, ()-> fibonacci.compute(-1));
     }
 }
